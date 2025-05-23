@@ -17,7 +17,7 @@ final class APIService: APIServiceProtocol {
         self.sslSession = sslSession
     }
 
-    func request<T: Decodable>(_ endpoint: Endpoint) -> AnyPublisher<T, Error> {
+    func request<T: Decodable>(_ endpoint: Endpoint, responseType: T.Type) -> AnyPublisher<T, Error> {
         guard let url = URL(string: baseURL + endpoint.path) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
@@ -31,7 +31,7 @@ final class APIService: APIServiceProtocol {
                 promise(result)
             }
         }
-        .decode(type: T.self, decoder: JSONDecoder())
+        .decode(type: responseType, decoder: JSONDecoder())
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }

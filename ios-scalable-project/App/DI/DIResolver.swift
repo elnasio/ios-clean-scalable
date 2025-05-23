@@ -19,4 +19,7 @@ enum DIResolver {
     static var sslSession: SSLPinningSession {
         AppContainer.shared.sslSession()
     }
+    static var appStorage: AppStorageProtocol {
+        AppContainer.shared.appStorage()
+    }
 }

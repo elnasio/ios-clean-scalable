@@ -10,10 +10,25 @@ import Combine
 @testable import ios_scalable_project
 
 final class MockAPIService: APIServiceProtocol {
-    func request<T>(_ endpoint: Endpoint) -> AnyPublisher<T, Error> where T : Decodable {
-        // Simulasikan data kosong atau dummy response
-        let dummy = "{}".data(using: .utf8)!
-        return Just(dummy)
+    func request<T>(_ endpoint: Endpoint, responseType: T.Type) -> AnyPublisher<T, Error> where T : Decodable {
+        // Dummy JSON untuk tipe yang diharapkan
+        let dummyJSON = """
+        {
+            "count": 1,
+            "results": [
+                {
+                    "id": 1,
+                    "title": "Test Article",
+                    "url": "https://example.com",
+                    "publishedAt": "2025-01-01T00:00:00Z"
+                }
+            ]
+        }
+        """
+
+        let data = Data(dummyJSON.utf8)
+
+        return Just(data)
             .tryMap { data in
                 try JSONDecoder().decode(T.self, from: data)
             }

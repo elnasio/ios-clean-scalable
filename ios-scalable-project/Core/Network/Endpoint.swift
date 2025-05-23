@@ -35,3 +35,9 @@ struct Endpoint {
         self.body = body
     }
 }
+
+extension Endpoint {
+    static var getArticles: Endpoint {
+        Endpoint(path: "/articles", method: .get)
+    }
+}

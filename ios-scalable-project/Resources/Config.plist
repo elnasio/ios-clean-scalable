@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>BaseURL</key>
-	<string>https://api.yourapp.com</string>
+	<string>https://api.spaceflightnewsapi.net/v4</string>
 </dict>
 </plist>

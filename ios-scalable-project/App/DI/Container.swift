@@ -45,4 +45,9 @@ extension AppContainer {
     var localDatabase: Factory<LocalDatabaseProtocol> {
         Factory(Self.shared) { CoreDataLocalDatabase() }
     }
+    var articleInteractor: Factory<ArticleInteractorProtocol> {
+        Factory(Self.shared) {
+            ArticleInteractor()
+        }
+    }
 }
