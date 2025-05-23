@@ -50,4 +50,9 @@ extension AppContainer {
             ArticleInteractor()
         }
     }
+    var loginInteractor: Factory<LoginInteractorProtocol> {
+        Factory(Self.shared) {
+            LoginInteractor()
+        }
+    }
 }

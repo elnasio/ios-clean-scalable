@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var isLoggedIn = false
+    @StateObject private var viewModel = LoginViewModel()
 
     var body: some View {
         NavigationStack {
-            if isLoggedIn {
+            if viewModel.isSuccess {
                 MainTabView()
             } else {
                 VStack(spacing: 20) {
@@ -22,7 +20,7 @@ struct LoginScreen: View {
                         .font(.title)
                         .bold()
 
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
                         .autocapitalization(.none)
                         .textContentType(.emailAddress)
                         .keyboardType(.emailAddress)
@@ -30,16 +28,27 @@ struct LoginScreen: View {
                         .background(Color(.systemGray6))
                         .cornerRadius(8)
 
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(8)
 
-                    Button("Login") {
-                        // Simulasi login berhasil
-                        isLoggedIn = true
+                    if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.red)
+                            .font(.footnote)
                     }
-                    .frame(maxWidth: .infinity)
+
+                    Button(action: {
+                        viewModel.login()
+                    }) {
+                        if viewModel.isLoading {
+                            ProgressView()
+                        } else {
+                            Text("Login")
+                                .frame(maxWidth: .infinity)
+                        }
+                    }
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
