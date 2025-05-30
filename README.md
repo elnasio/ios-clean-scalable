@@ -3,7 +3,7 @@ from pathlib import Path
 readme_content = """\
 # ios-scalable-project
 
-A scalable, modular iOS project built with **SwiftUI**, **VIPER + MVI-style**, and powered by **Factory (DI)**, **Core Data**, **UserDefaults**, and **SSL Pinning** for robust production readiness.
+A scalable, modular iOS project built with **SwiftUI**, **VIPER Hybrid (VIPER + MVI-style + SwiftUI + Combine)**, and powered by **Factory (DI)**, **Core Data**, **UserDefaults**, and **SSL Pinning** for robust production readiness.
 
 ---
 
