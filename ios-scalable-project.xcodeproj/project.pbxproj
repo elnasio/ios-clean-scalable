@@ -33,25 +33,6 @@
 		A56040EB2DDF4C3C0038C09D /* ios-scalable-projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-scalable-projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A56041322DDF5D4B0038C09D /* Exceptions for "ios-scalable-projectTests" folder in "ios-scalable-project" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Mocks/MockAPIService.swift,
-				Mocks/MockSysParamService.swift,
-			);
-			target = A56040CE2DDF4C3A0038C09D /* ios-scalable-project */;
-		};
-		A56041332DDF5D4B0038C09D /* Exceptions for "ios-scalable-projectTests" folder in "ios-scalable-projectTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Mocks/MockAPIService.swift,
-				Mocks/MockSysParamService.swift,
-			);
-			target = A56040E02DDF4C3C0038C09D /* ios-scalable-projectTests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A56040D12DDF4C3A0038C09D /* ios-scalable-project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -60,10 +41,6 @@
 		};
 		A56040E42DDF4C3C0038C09D /* ios-scalable-projectTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A56041322DDF5D4B0038C09D /* Exceptions for "ios-scalable-projectTests" folder in "ios-scalable-project" target */,
-				A56041332DDF5D4B0038C09D /* Exceptions for "ios-scalable-projectTests" folder in "ios-scalable-projectTests" target */,
-			);
 			path = "ios-scalable-projectTests";
 			sourceTree = "<group>";
 		};
@@ -435,6 +412,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -462,6 +440,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -488,6 +467,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -506,6 +486,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -523,6 +504,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ebuddy.ios-scalable-projectUITests";
@@ -539,6 +521,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8XTG26P6G2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ebuddy.ios-scalable-projectUITests";
